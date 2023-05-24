@@ -1,0 +1,7 @@
+{% from "./imageMacro.njk" import image %}
+
+{% macro button(btn_id, class, src, alt, width) %}
+    <button class="advice__button" type="button" id="colorButton">
+        {{ image(class, src, alt, width) }}
+    </button>
+{% endmacro %}

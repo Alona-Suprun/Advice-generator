@@ -1,0 +1,47 @@
+.advice {
+  position: relative;
+  background-color: $base-color;
+  padding: 5rem 2rem;
+  border-radius: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    color: $secondary-color;
+    text-shadow: 5px 4px 11px $bg-color, 0 2px 5px $bg-color;
+    font-size: clamp(0.7rem, 3.5vw, 1rem);
+  }
+
+  &__text {
+    color: $text-color;
+    text-shadow: 5px 4px 11px $bg-color, 0 2px 5px $bg-color;
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+    padding: 2rem 1rem;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: -1rem;
+    right: 50%;
+    transform: translate(50%, 1.4rem);
+    margin: 0 auto;
+    border: none;
+    background-color: $secondary-color;
+    padding: 1rem;
+    border-radius: 100%;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 3rem $secondary-color;
+
+        .advice__button-image {
+            transform: rotate(180deg);
+        }
+      }
+
+    &-image {
+        transition: transform 0.3s ease-in;
+    }
+  }
+}
