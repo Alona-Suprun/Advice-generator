@@ -1,17 +1,16 @@
 {% from "../macros/adviceMacro.njk" import advice %}
+{% from "../macros/buttonMacro.njk" import Button %}
 
+<div class="advice" id="colorDiv">
     {{advice(
     header_id='adviceTitle',
+    header_class='advice__title',
     header='advice # 179',
     txt_id='adviceTtext',
     text_class='advice__text',
     txt='Never regret. If it is good. If it is bad, it is experience.',
-    id="colorButton",
-    class="advice__button-image",
-    src='../images/dice.svg',
-    alt='btn-image',
-    width='40rem',
-    class2='',
-    src2='../images/pattern-divider.svg',
-    alt2='dividere',
-    width2='250rem') }}
+    src='../images/pattern-divider.svg',
+    alt='dividere',
+    width='250rem' ) }}
+    {{Button({ img_class: 'advice__button-image', img_src:'../images/dice.svg', img_alt:'btn-image', variant: 'round', id: 'colorButton' })}}
+</div>

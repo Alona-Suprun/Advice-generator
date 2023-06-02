@@ -1,13 +1,15 @@
 {% from "./titleMacro.njk" import title %}
 {% from "./textMacro.njk" import text %}
 {% from "./imageMacro.njk" import image %}
-{% from "./buttonMacro.njk" import button %}
 
-{% macro advice(header_id, header, txt_id, text_class, txt, btn_id, class2, src2, alt2, width2, class, src, alt, width) %}
-    <div class="advice" id="colorDiv">
-        {{title(header_id, header)}}
+{% macro advice(header_id, header_class, header, txt_id, text_class, txt, class, src, alt, width) %}
+    {% if header %}
+        {{title(header_id, header_class, header)}}
+    {% endif %}
+    {% if txt %}
         {{text(txt_id, text_class, txt)}}
-        {{image(class2, src2, alt2, width2) }}
-        {{button(btn_id, class, src, alt, width)}}
-    </div>
+    {% endif %}
+    {% if src %}
+        {{image(class, src, alt, width) }}
+    {% endif %}
 {% endmacro %}

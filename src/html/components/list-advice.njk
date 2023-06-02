@@ -1,0 +1,14 @@
+{% from "../macros/adviceMacro.njk" import advice %}
+{% from "../macros/buttonMacro.njk" import Button %}
+
+<div class="advice">
+    {{advice(
+    header_class='advice__title',
+    header='Famous quotes!'
+    ) }}
+    <div class="quotes">
+        <lu class="qoutes__list advice__text"></ul>
+    </div>
+    {{Button({ text: 'Display List', variant: 'long', id: 'successListButton' })}}
+    {{Button({ text: 'Display Error', variant: 'long', id: 'errorListButton' })}}
+</div>

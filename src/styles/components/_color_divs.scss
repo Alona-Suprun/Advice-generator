@@ -1,0 +1,27 @@
+.color {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__div{
+        padding: 3rem;
+        &:hover{
+            cursor: pointer;
+        }
+        &--purple {
+            background-color: $secondary-color;
+        }
+        &--blue {
+            background-color: $text-color;
+        }
+    }
+
+    &__list {
+        color: $base-color;
+        font-size: clamp(1rem, 3.5vw, 1.5rem);
+        @include reset-list;
+        & li {
+            margin-bottom: 20px;
+        }
+    }
+}

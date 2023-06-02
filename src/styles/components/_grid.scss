@@ -9,27 +9,21 @@
   align-items: center;
   justify-items: center;
   display: grid;
-  position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  @include full-screen;
   transform: none;
 
   &__item {
     display: grid;
     grid-area: span 1 / span 1 / span 1 / span 1;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 0.7rem;
+    @include square(4rem, $radius: 0.7rem);
     background-color: $grid-item-color;
 
-    &--plus {
+    &:nth-child(3n+3) {
         transform-style: preserve-3d;
         transform: translate3d(0, 0, 3rem);
     }
 
-    &--minus {
+    &:nth-child(5n+5) {
         transform-style: preserve-3d;
         transform: translate3d(0, 0, -6rem);
     }

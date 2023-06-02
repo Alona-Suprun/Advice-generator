@@ -1,0 +1,15 @@
+.form {
+    position: relative;
+    padding: 3rem;
+    &__input{
+        color: $secondary-color;
+        background-color: $base-color;
+    }
+    &__field {
+        margin-bottom: 1rem;
+    }
+    &__responce {
+        display: none;
+    }
+
+}

@@ -1,11 +1,15 @@
-@import 'shared/base';
-@import 'shared/url';
 @import 'shared/reset';
 @import 'shared/variables';
 @import 'shared/animation';
+@import 'shared/mixins';
 @import 'components/body';
 @import 'components/container';
 @import 'components/introduction';
 @import 'components/advice';
 @import 'components/grid';
 @import 'components/word_rows';
+@import 'components/buttons';
+@import 'components/quotes';
+@import 'components/form';
+@import 'components/spinner';
+@import 'components/color_divs';

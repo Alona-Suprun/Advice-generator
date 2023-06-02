@@ -1,0 +1,18 @@
+{% macro form() %}
+<form method="get" class="form" id="form">
+  <div class="form__field">
+    <label class="form__label advice__text" for="name">Enter your name: </label>
+    <input class="form__input" type="text" name="name" id="name" required>
+  </div>
+  <div class="form__field">
+    <label class="form__label advice__text" for="textarea">Type a comment here: </label>
+    <textarea class="form__input" type="text" name="textarea" id="textarea" required>
+  </div>
+  <div>
+    <button class="button advice__button--long" type="submit" value="saveAsCopy">Leave a comment</button>
+  </div>
+  <div id="spinner"></div>
+  <p class="advice__text form__responce" id="thankYouMessage">Form is submited! Thank You for Your feetback!</p>
+</form>
+
+{% endmacro %}

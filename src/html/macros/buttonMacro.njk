@@ -1,7 +1,17 @@
-{% from "./imageMacro.njk" import image %}
-
-{% macro button(btn_id, class, src, alt, width) %}
-    <button class="advice__button" type="button" id="colorButton">
-        {{ image(class, src, alt, width) }}
-    </button>
+{% macro button(tag, data) %}
+    {% set btnClass = 'button' %}
+    {% if data.variant %}
+        {% set btnClass = btnClass + ' advice__button--' + data.variant %}
+    {% endif %}
+    <{{ tag }} {{ ('id="'+ data.id +'"')|safe if data.id }} {{ ('href="'+ data.href +'"')|safe if data.href }} {{ ('title="'+ data.title +'"')|safe if data.title }} {{ ('type="'+ data.type +'"')|safe if data.type }} class="{{ btnClass }}"{{ ' '+ data.class if data.class }}>
+        {% if data.text %}
+            <span>{{ data.text }}</span>
+        {% endif %}
+        {% if data.img_src %}
+            <img src="{{data.img_src}}" alt="{{data.img_alt}}" class="{{data.img_class}}">
+        {% endif %}
+    </{{ tag }}>
+{% endmacro %}
+{% macro Button(data) %}
+    {{ button('button', data) }}
 {% endmacro %}

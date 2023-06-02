@@ -1,0 +1,10 @@
+{% from "../macros/adviceMacro.njk" import advice %}
+{% from "../macros/formMacro.njk" import form %}
+
+<div class="advice">
+    {{advice(
+    header_class='advice__title',
+    header='It is important for as what you think about our service!'
+    ) }}
+   {{form()}}
+</div>

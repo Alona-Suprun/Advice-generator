@@ -1,0 +1,16 @@
+{% from "../macros/adviceMacro.njk" import advice %}
+{% from "../macros/imageMacro.njk" import image %}
+{% from "../macros/buttonMacro.njk" import Button %}
+
+<div class="advice">
+    {{advice(
+    header_class='advice__title',
+    header='Try and see what dog breed you look like!'
+    ) }}
+    <div class="advice__img">
+        {{image( class='advice__image', src='https://i.dailymail.co.uk/i/newpix/2018/09/03/15/4FAA319100000578-0-image-a-133_1535983826412.jpg', alt='dog image', width='500rem') }}
+    </div>
+    {{Button({ text: 'Success', variant: 'long', id: 'successButton' })}}
+    {{Button({ text: 'Error', variant: 'long', id: 'errorButton' })}}
+    {{Button({ text: 'Reset', variant: 'long', id: 'resetButton' })}}
+</div>

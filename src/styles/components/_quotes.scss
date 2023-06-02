@@ -1,0 +1,10 @@
+ .qoutes{
+    padding: 1rem 10rem;
+    min-height: 5rem;
+    &__list {
+        &-item {
+            @include reset-list;
+            margin-bottom: 20px;
+        }
+    }
+}

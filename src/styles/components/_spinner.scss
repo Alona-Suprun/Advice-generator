@@ -1,0 +1,9 @@
+#spinner {
+    border: 16px solid $bg-color;
+    border-top: 16px solid $secondary-color;
+    @include square(4rem, $radius: 50%);
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+    display: none;
+    @include position-center;
+  }

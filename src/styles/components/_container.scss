@@ -6,11 +6,7 @@
 
   &__background {
     mix-blend-mode: hard-light;
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+    @include full-screen;
     z-index: -1;
   }
 }

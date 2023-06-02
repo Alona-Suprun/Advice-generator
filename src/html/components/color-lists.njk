@@ -1,0 +1,16 @@
+{% from "../macros/adviceMacro.njk" import advice %}
+
+<div class="advice">
+    {{advice(
+    header_class='advice__title',
+    header='Hover the square to see content!'
+    ) }}
+    <div class="color">
+        <div id="purple" class="color__div color__div--purple">
+            <lu id="purple-list" class="color__list color_list--purple"></ul>
+        </div>
+        <div id="blue" class="color__div color__div--blue">
+            <ul id="blue-list" class="color__list color__list--blue"></ul>
+        </div>
+    </div>
+</div>

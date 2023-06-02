@@ -4,13 +4,12 @@
   padding: 5rem 2rem;
   border-radius: 1rem;
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 3rem auto;
 
   &__title {
     color: $secondary-color;
     text-shadow: 5px 4px 11px $bg-color, 0 2px 5px $bg-color;
-    font-size: clamp(0.7rem, 3.5vw, 1rem);
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
   }
 
   &__text {
@@ -20,17 +19,28 @@
     padding: 2rem 1rem;
   }
 
+  &__img {
+    margin-top: 2rem;
+    min-height: 10rem;
+    & p {
+      margin-top: 1rem;
+      color: $secondary-color;
+      font-size: clamp(0.8rem, 3.5vw, 1.2rem);
+    }
+  }
+
+  &__image {
+    @include devices(mobile) {
+      width: 15rem;
+    }
+  }
+
   &__button {
-    position: absolute;
-    bottom: -1rem;
-    right: 50%;
-    transform: translate(50%, 1.4rem);
+    &--round {
+    @include position-bottom;
     margin: 0 auto;
-    border: none;
     background-color: $secondary-color;
-    padding: 1rem;
     border-radius: 100%;
-    cursor: pointer;
 
     &:hover {
         box-shadow: 0 0 3rem $secondary-color;
@@ -39,7 +49,19 @@
             transform: rotate(180deg);
         }
       }
-
+    }
+    &--long {
+      background-color: $bg-color;
+      color: $secondary-color;
+      font-size: clamp(0.5rem, 3.5vw, 1rem);
+      font-weight: 600;
+      min-width: 7rem;
+      margin-top: 2rem;
+      border-radius: 2rem;
+          &:hover {
+            box-shadow: 0 0 3rem $bg-color;
+          }
+    }
     &-image {
         transition: transform 0.3s ease-in;
     }
